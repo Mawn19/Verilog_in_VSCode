@@ -16,6 +16,8 @@ half_adder uut(
   initial 
     begin
 
+        $dumpfile("half_adder_tb.vcd");
+        $dumpvars(0, half_adder_tb);
         a = 1'b0;
         b = 1'b0;
         #2 a=1'b0 ; b=1'b1;
@@ -25,7 +27,7 @@ half_adder uut(
       $display("Test complete");
     end
 
-  initial $monitor ("time=%g, s=%b, c=%b, a=%b, b=%b, $time, s, c, a, b");
+  //initial $monitor ("time=%g, s=%b, c=%b, a=%b, b=%b, $time, s, c, a, b");
   initial #10 $finish;
 
 
