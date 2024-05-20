@@ -7,10 +7,10 @@ reg a, b;
 wire s,c;
 
 half_adder uut(
-    .s(s),
-    .c(c),
-    .a(a),
-    .b(b)
+    .s (s),
+    .c (c),
+    .half_a (a),
+    .half_b (b)
     );
 
   initial 

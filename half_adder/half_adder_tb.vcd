@@ -1,5 +1,5 @@
 $date
-	Mon May 13 19:36:29 2024
+	Mon May 20 17:39:48 2024
 $end
 $version
 	Icarus Verilog
@@ -13,9 +13,9 @@ $var wire 1 " c $end
 $var reg 1 # a $end
 $var reg 1 $ b $end
 $scope module uut $end
-$var wire 1 # a $end
-$var wire 1 $ b $end
 $var wire 1 " c $end
+$var wire 1 # half_a $end
+$var wire 1 $ half_b $end
 $var wire 1 ! s $end
 $upscope $end
 $upscope $end

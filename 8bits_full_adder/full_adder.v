@@ -13,20 +13,35 @@
 // https://sebastian.itch.io/digital-logic-sim
 
 
-// sum = c_in XOR (A XOR B)
-// c_out = AB + c_in (A XOR B) 
-
 `timescale 1ns/1ps
 
-module full_adder(sum, c_out, c_in, num1, num2);
+module half_adder(in1, in2, sum, c);
 
+    input in1, in2;
+    output sum, c;
 
-input  [7:0] num1, num2;
-input c_in;
-output [7:0] sum;
-input c_out;
+    xor (sum, in1, in2);
+    and (c, in1, in2);
 
-assign sum = c_in ^ (num1 ^ num2);
-assign c_out = num1 & num2 + c_in & (num1 ^ num2);
+endmodule
+
+module full_adder (A, B, C_in, Sum, C_out);
+
+input A, B, C_in;
+output Sum, C_out;
+
+half_adder half_adder_st1 (.in1 (st1_in1), .in2 (st1_in2), .sum (st1_sum), .c (st1_c_out));
+
+half_adder half_adder_st2 (.in1 (st2_in1), .in2 (st2_in2), .sum (st2_sum), .c (st2_c_out));
+
+assign st1_in1 = A;
+assign st1_in2 = B;
+
+assign st2_in1 = C_in; // to be checked!!!!! checked and it works
+assign st2_in2 = st1_sum;
+
+assign Sum = st2_sum;
+
+or (C_out, st1_c_out, st2_c_out);
 
 endmodule
