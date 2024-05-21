@@ -1,0 +1,84 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "Y:\iverilog\lib\ivl\system.vpi";
+:vpi_module "Y:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "Y:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "Y:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "Y:\iverilog\lib\ivl\va_math.vpi";
+S_000001333f9260c0 .scope module, "adder_8bits" "adder_8bits" 2 4;
+ .timescale -3 -12;
+    .port_info 0 /INPUT 8 "first_byte";
+    .port_info 1 /INPUT 8 "second_byte";
+    .port_info 2 /INPUT 1 "carry_in";
+    .port_info 3 /OUTPUT 8 "sum_bytes";
+    .port_info 4 /OUTPUT 8 "carry_out";
+o000001333f92a338 .functor BUFZ 1, C4<z>; HiZ drive
+v000001333f96f1e0_0 .net "carry_in", 0 0, o000001333f92a338;  0 drivers
+v000001333f96eba0_0 .net "carry_out", 7 0, L_000001333f96f0a0;  1 drivers
+o000001333f92a4e8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001333f96ee20_0 .net "first_byte", 7 0, o000001333f92a4e8;  0 drivers
+o000001333f92a518 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000001333f96ec40_0 .net "second_byte", 7 0, o000001333f92a518;  0 drivers
+v000001333f96ece0_0 .net "sum_bytes", 7 0, L_000001333f96f500;  1 drivers
+L_000001333f96eec0 .part o000001333f92a4e8, 0, 1;
+L_000001333f96ef60 .part o000001333f92a518, 0, 1;
+L_000001333f96f500 .part/pv L_000001333f96fd20, 0, 1, 8;
+L_000001333f96f0a0 .part/pv L_000001333f970320, 0, 1, 8;
+S_000001333f926250 .scope module, "FA_block1" "full_adder" 2 11, 3 28 0, S_000001333f9260c0;
+ .timescale -3 -12;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "C_in";
+    .port_info 3 /OUTPUT 1 "Sum";
+    .port_info 4 /OUTPUT 1 "C_out";
+L_000001333f96f920 .functor BUFZ 1, L_000001333f96eec0, C4<0>, C4<0>, C4<0>;
+L_000001333f96fa20 .functor BUFZ 1, L_000001333f96ef60, C4<0>, C4<0>, C4<0>;
+L_000001333f96fb20 .functor BUFZ 1, o000001333f92a338, C4<0>, C4<0>, C4<0>;
+L_000001333f96fc20 .functor BUFZ 1, L_000001333f924bd0, C4<0>, C4<0>, C4<0>;
+L_000001333f96fd20 .functor BUFZ 1, L_000001333f96f840, C4<0>, C4<0>, C4<0>;
+L_000001333f970320 .functor OR 1, L_000001333f924c40, L_000001333f96f8b0, C4<0>, C4<0>;
+v000001333f96e920_0 .net "A", 0 0, L_000001333f96eec0;  1 drivers
+v000001333f96e9c0_0 .net "B", 0 0, L_000001333f96ef60;  1 drivers
+v000001333f96f780_0 .net "C_in", 0 0, o000001333f92a338;  alias, 0 drivers
+v000001333f96eb00_0 .net "C_out", 0 0, L_000001333f970320;  1 drivers
+v000001333f96f320_0 .net "Sum", 0 0, L_000001333f96fd20;  1 drivers
+v000001333f96f640_0 .net "st1_c_out", 0 0, L_000001333f924c40;  1 drivers
+v000001333f96f6e0_0 .net "st1_in1", 0 0, L_000001333f96f920;  1 drivers
+v000001333f96ed80_0 .net "st1_in2", 0 0, L_000001333f96fa20;  1 drivers
+v000001333f96f000_0 .net "st1_sum", 0 0, L_000001333f924bd0;  1 drivers
+v000001333f96ea60_0 .net "st2_c_out", 0 0, L_000001333f96f8b0;  1 drivers
+v000001333f96f5a0_0 .net "st2_in1", 0 0, L_000001333f96fb20;  1 drivers
+v000001333f96f3c0_0 .net "st2_in2", 0 0, L_000001333f96fc20;  1 drivers
+v000001333f96e880_0 .net "st2_sum", 0 0, L_000001333f96f840;  1 drivers
+S_000001333f86e9d0 .scope module, "half_adder_st1" "half_adder" 3 33, 3 18 0, S_000001333f926250;
+ .timescale -3 -12;
+    .port_info 0 /INPUT 1 "in1";
+    .port_info 1 /INPUT 1 "in2";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "c";
+L_000001333f924bd0 .functor XOR 1, L_000001333f96f920, L_000001333f96fa20, C4<0>, C4<0>;
+L_000001333f924c40 .functor AND 1, L_000001333f96f920, L_000001333f96fa20, C4<1>, C4<1>;
+v000001333f9263e0_0 .net "c", 0 0, L_000001333f924c40;  alias, 1 drivers
+v000001333f8f2ef0_0 .net "in1", 0 0, L_000001333f96f920;  alias, 1 drivers
+v000001333f926480_0 .net "in2", 0 0, L_000001333f96fa20;  alias, 1 drivers
+v000001333f86eb60_0 .net "sum", 0 0, L_000001333f924bd0;  alias, 1 drivers
+S_000001333f86ec00 .scope module, "half_adder_st2" "half_adder" 3 35, 3 18 0, S_000001333f926250;
+ .timescale -3 -12;
+    .port_info 0 /INPUT 1 "in1";
+    .port_info 1 /INPUT 1 "in2";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "c";
+L_000001333f96f840 .functor XOR 1, L_000001333f96fb20, L_000001333f96fc20, C4<0>, C4<0>;
+L_000001333f96f8b0 .functor AND 1, L_000001333f96fb20, L_000001333f96fc20, C4<1>, C4<1>;
+v000001333f86ed90_0 .net "c", 0 0, L_000001333f96f8b0;  alias, 1 drivers
+v000001333f9249f0_0 .net "in1", 0 0, L_000001333f96fb20;  alias, 1 drivers
+v000001333f924a90_0 .net "in2", 0 0, L_000001333f96fc20;  alias, 1 drivers
+v000001333f924b30_0 .net "sum", 0 0, L_000001333f96f840;  alias, 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "adder_8bits.v";
+    "./full_adder.v";

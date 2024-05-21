@@ -8,12 +8,12 @@
 
 
 //Short description:
-// Implement a 8 bits full adder, after a half adder has been implemented and simulated.
+// Implement an 8 bits full adder, after a half adder has been implemented and simulated.
 // The 8 bits full adder could also be visualized within (Digital Logic Sim from Sebastian Lague)
 // https://sebastian.itch.io/digital-logic-sim
 
 
-`timescale 1ns/1ps
+`timescale 1ms/1ps
 
 module half_adder(in1, in2, sum, c);
 

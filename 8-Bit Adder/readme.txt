@@ -8,3 +8,6 @@ to get the full adder.
 3- full_adder_temp Module
 4- Top_module: Instantiante 8 full adders (full_adder_inst1, full_adder_inst2, ..., full_adder_instn)
 to create an 8 bits full adder.
+
+create a folder for the 8-Bit adder with documentation
+> https://cvbl.iiita.ac.in/sks/coa-files/tutorial/Tutorial-5.pdf
