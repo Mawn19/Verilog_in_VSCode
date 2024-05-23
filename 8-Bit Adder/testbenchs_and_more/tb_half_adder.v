@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
-`include "half_adder.v"
+// `include "half_adder.v"
+
+`include C:\Users\youness.maarouf\Documents\INV_Github_LocalFolder\Verilog_in_VSCode\8-Bit Adder\src\half_adder.v
 
 module tb_half_adder;
 
@@ -17,6 +19,8 @@ half_adder uut(
     begin
 
         $dumpfile("tb_half_adder.vcd");
+
+        // $dumpfile("C:\Users\youness.maarouf\Documents\INV_Github_LocalFolder\Verilog_in_VSCode\8-Bit Adder\log files, vvp and vcd\"+"tb_half_adder.vcd");
         $dumpvars(0, tb_half_adder);
 
            tb_HA_in1 = 1'b0  ; tb_HA_in2 = 1'b0;
