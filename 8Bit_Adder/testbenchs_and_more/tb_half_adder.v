@@ -1,7 +1,13 @@
 `timescale 1ns/1ps
-// `include "half_adder.v"
+// `include "half_adder.v
+`include "./half_adder.v"
 
-`include C:\Users\youness.maarouf\Documents\INV_Github_LocalFolder\Verilog_in_VSCode\8-Bit Adder\src\half_adder.v
+// // Verilog allows you to separate HDL source code into more than one file. To reference the code in another file, use the following syntax in the current file.
+// // `include <path/file-to-be-included>
+
+
+// `include "C:\Users\youness.maarouf\Documents\INV_Github_LocalFolder\Verilog_in_VSCode\8Bit_Adder\src\half_adder.v"
+
 
 module tb_half_adder;
 
