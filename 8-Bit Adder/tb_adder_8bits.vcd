@@ -1,0 +1,456 @@
+$date
+	Thu May 23 12:22:45 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_adder_8bits $end
+$var wire 8 ! tb_adder_sum [7:0] $end
+$var wire 8 " tb_adder_cout [7:0] $end
+$var reg 8 # tb_adder_cin [7:0] $end
+$var reg 8 $ tb_adder_in1 [7:0] $end
+$var reg 8 % tb_adder_in2 [7:0] $end
+$scope module uut $end
+$var wire 8 & Adder_cin [7:0] $end
+$var wire 8 ' Adder_in1 [7:0] $end
+$var wire 8 ( Adder_in2 [7:0] $end
+$var wire 8 ) Adder_sum [7:0] $end
+$var wire 8 * Adder_cout [7:0] $end
+$scope module FA_block0 $end
+$var wire 1 + FA_cin $end
+$var wire 1 , FA_cout $end
+$var wire 1 - FA_in1 $end
+$var wire 1 . FA_in2 $end
+$var wire 1 / FA_sum $end
+$var wire 1 0 st1_HA_in1 $end
+$var wire 1 1 st1_HA_in2 $end
+$var wire 1 2 st2_HA_in1 $end
+$var wire 1 3 st2_HA_in2 $end
+$var wire 1 4 st2_sum $end
+$var wire 1 5 st2_c_out $end
+$var wire 1 6 st1_sum $end
+$var wire 1 7 st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 7 HA_cout $end
+$var wire 1 0 HA_in1 $end
+$var wire 1 1 HA_in2 $end
+$var wire 1 6 HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 5 HA_cout $end
+$var wire 1 2 HA_in1 $end
+$var wire 1 3 HA_in2 $end
+$var wire 1 4 HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block1 $end
+$var wire 1 8 FA_cin $end
+$var wire 1 9 FA_cout $end
+$var wire 1 : FA_in1 $end
+$var wire 1 ; FA_in2 $end
+$var wire 1 < FA_sum $end
+$var wire 1 = st1_HA_in1 $end
+$var wire 1 > st1_HA_in2 $end
+$var wire 1 ? st2_HA_in1 $end
+$var wire 1 @ st2_HA_in2 $end
+$var wire 1 A st2_sum $end
+$var wire 1 B st2_c_out $end
+$var wire 1 C st1_sum $end
+$var wire 1 D st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 D HA_cout $end
+$var wire 1 = HA_in1 $end
+$var wire 1 > HA_in2 $end
+$var wire 1 C HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 B HA_cout $end
+$var wire 1 ? HA_in1 $end
+$var wire 1 @ HA_in2 $end
+$var wire 1 A HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block2 $end
+$var wire 1 E FA_cin $end
+$var wire 1 F FA_cout $end
+$var wire 1 G FA_in1 $end
+$var wire 1 H FA_in2 $end
+$var wire 1 I FA_sum $end
+$var wire 1 J st1_HA_in1 $end
+$var wire 1 K st1_HA_in2 $end
+$var wire 1 L st2_HA_in1 $end
+$var wire 1 M st2_HA_in2 $end
+$var wire 1 N st2_sum $end
+$var wire 1 O st2_c_out $end
+$var wire 1 P st1_sum $end
+$var wire 1 Q st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 Q HA_cout $end
+$var wire 1 J HA_in1 $end
+$var wire 1 K HA_in2 $end
+$var wire 1 P HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 O HA_cout $end
+$var wire 1 L HA_in1 $end
+$var wire 1 M HA_in2 $end
+$var wire 1 N HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block3 $end
+$var wire 1 R FA_cin $end
+$var wire 1 S FA_cout $end
+$var wire 1 T FA_in1 $end
+$var wire 1 U FA_in2 $end
+$var wire 1 V FA_sum $end
+$var wire 1 W st1_HA_in1 $end
+$var wire 1 X st1_HA_in2 $end
+$var wire 1 Y st2_HA_in1 $end
+$var wire 1 Z st2_HA_in2 $end
+$var wire 1 [ st2_sum $end
+$var wire 1 \ st2_c_out $end
+$var wire 1 ] st1_sum $end
+$var wire 1 ^ st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 ^ HA_cout $end
+$var wire 1 W HA_in1 $end
+$var wire 1 X HA_in2 $end
+$var wire 1 ] HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 \ HA_cout $end
+$var wire 1 Y HA_in1 $end
+$var wire 1 Z HA_in2 $end
+$var wire 1 [ HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block4 $end
+$var wire 1 _ FA_cin $end
+$var wire 1 ` FA_cout $end
+$var wire 1 a FA_in1 $end
+$var wire 1 b FA_in2 $end
+$var wire 1 c FA_sum $end
+$var wire 1 d st1_HA_in1 $end
+$var wire 1 e st1_HA_in2 $end
+$var wire 1 f st2_HA_in1 $end
+$var wire 1 g st2_HA_in2 $end
+$var wire 1 h st2_sum $end
+$var wire 1 i st2_c_out $end
+$var wire 1 j st1_sum $end
+$var wire 1 k st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 k HA_cout $end
+$var wire 1 d HA_in1 $end
+$var wire 1 e HA_in2 $end
+$var wire 1 j HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 i HA_cout $end
+$var wire 1 f HA_in1 $end
+$var wire 1 g HA_in2 $end
+$var wire 1 h HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block5 $end
+$var wire 1 l FA_cin $end
+$var wire 1 m FA_cout $end
+$var wire 1 n FA_in1 $end
+$var wire 1 o FA_in2 $end
+$var wire 1 p FA_sum $end
+$var wire 1 q st1_HA_in1 $end
+$var wire 1 r st1_HA_in2 $end
+$var wire 1 s st2_HA_in1 $end
+$var wire 1 t st2_HA_in2 $end
+$var wire 1 u st2_sum $end
+$var wire 1 v st2_c_out $end
+$var wire 1 w st1_sum $end
+$var wire 1 x st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 x HA_cout $end
+$var wire 1 q HA_in1 $end
+$var wire 1 r HA_in2 $end
+$var wire 1 w HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 v HA_cout $end
+$var wire 1 s HA_in1 $end
+$var wire 1 t HA_in2 $end
+$var wire 1 u HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block6 $end
+$var wire 1 y FA_cin $end
+$var wire 1 z FA_cout $end
+$var wire 1 { FA_in1 $end
+$var wire 1 | FA_in2 $end
+$var wire 1 } FA_sum $end
+$var wire 1 ~ st1_HA_in1 $end
+$var wire 1 !" st1_HA_in2 $end
+$var wire 1 "" st2_HA_in1 $end
+$var wire 1 #" st2_HA_in2 $end
+$var wire 1 $" st2_sum $end
+$var wire 1 %" st2_c_out $end
+$var wire 1 &" st1_sum $end
+$var wire 1 '" st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 '" HA_cout $end
+$var wire 1 ~ HA_in1 $end
+$var wire 1 !" HA_in2 $end
+$var wire 1 &" HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 %" HA_cout $end
+$var wire 1 "" HA_in1 $end
+$var wire 1 #" HA_in2 $end
+$var wire 1 $" HA_sum $end
+$upscope $end
+$upscope $end
+$scope module FA_block7 $end
+$var wire 1 (" FA_cin $end
+$var wire 1 )" FA_cout $end
+$var wire 1 *" FA_in1 $end
+$var wire 1 +" FA_in2 $end
+$var wire 1 ," FA_sum $end
+$var wire 1 -" st1_HA_in1 $end
+$var wire 1 ." st1_HA_in2 $end
+$var wire 1 /" st2_HA_in1 $end
+$var wire 1 0" st2_HA_in2 $end
+$var wire 1 1" st2_sum $end
+$var wire 1 2" st2_c_out $end
+$var wire 1 3" st1_sum $end
+$var wire 1 4" st1_c_out $end
+$scope module half_adder_st1 $end
+$var wire 1 4" HA_cout $end
+$var wire 1 -" HA_in1 $end
+$var wire 1 ." HA_in2 $end
+$var wire 1 3" HA_sum $end
+$upscope $end
+$scope module half_adder_st2 $end
+$var wire 1 2" HA_cout $end
+$var wire 1 /" HA_in1 $end
+$var wire 1 0" HA_in2 $end
+$var wire 1 1" HA_sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+04"
+03"
+02"
+x1"
+00"
+x/"
+0."
+0-"
+x,"
+0+"
+0*"
+0)"
+x("
+0'"
+0&"
+0%"
+x$"
+0#"
+x""
+0!"
+0~
+x}
+0|
+0{
+0z
+xy
+0x
+0w
+0v
+xu
+0t
+xs
+0r
+0q
+xp
+0o
+0n
+0m
+xl
+0k
+0j
+0i
+xh
+0g
+xf
+0e
+0d
+xc
+0b
+0a
+0`
+x_
+0^
+0]
+0\
+x[
+0Z
+xY
+0X
+0W
+xV
+0U
+0T
+0S
+xR
+0Q
+0P
+0O
+xN
+0M
+xL
+0K
+0J
+xI
+0H
+0G
+0F
+xE
+0D
+0C
+0B
+xA
+0@
+x?
+0>
+0=
+x<
+0;
+0:
+09
+x8
+07
+16
+x5
+x4
+13
+x2
+01
+10
+x/
+0.
+1-
+x,
+x+
+b0x *
+bx )
+b0 (
+b1 '
+bx &
+b0 %
+b1 $
+bx #
+b0x "
+bx !
+$end
+#1000
+1<
+1A
+1?
+18
+b1 "
+b1 *
+1,
+0/
+04
+05
+0I
+0N
+0V
+0[
+0c
+0h
+0p
+0u
+0}
+0$"
+b10 !
+b10 )
+0,"
+01"
+03
+06
+17
+02
+0+
+0L
+0E
+0Y
+0R
+0f
+0_
+0s
+0l
+0""
+0y
+0/"
+0("
+11
+1.
+b10 &
+b10 #
+b1 %
+b1 (
+#2000
+x<
+xA
+x?
+x8
+b0x0 &
+1/
+14
+b0 "
+b0 *
+0,
+1I
+1N
+1p
+1u
+b11001x1 !
+b11001x1 )
+1}
+1$"
+13
+16
+07
+1M
+1P
+1t
+1w
+1#"
+1&"
+00
+0-
+1J
+1G
+1q
+1n
+1~
+1{
+b1100100 $
+b1100100 '
+#3000
+b1100101 !
+b1100101 )
+0<
+0A
+0?
+08
+b0 &
+b0 #
+#12000

@@ -14,34 +14,35 @@
 
 
 `timescale 1ms/1ps
+`include "half_adder.v"
 
-module half_adder(in1, in2, sum, c);
+// module half_adder(HA_in1, HA_in2, HA_sum, HA_cout);
 
-    input in1, in2;
-    output sum, c;
+//     input HA_in1, HA_in2;
+//     output HA_sum, HA_cout;
 
-    xor (sum, in1, in2);
-    and (c, in1, in2);
+//     xor (sum, HA_in1, HA_in2);
+//     and (HA_cout, HA_in1, HA_in2);
 
-endmodule
+// endmodule
 
-module full_adder (A, B, C_in, Sum, C_out);
+module full_adder (FA_in1, FA_in2, FA_cin, FA_sum, FA_cout);
 
-input A, B, C_in;
-output Sum, C_out;
+input FA_in1, FA_in2, FA_cin;
+output FA_sum, FA_cout;
 
-half_adder half_adder_st1 (.in1 (st1_in1), .in2 (st1_in2), .sum (st1_sum), .c (st1_c_out));
+half_adder half_adder_st1 (.HA_in1 (st1_HA_in1), .HA_in2 (st1_HA_in2), .HA_sum (st1_sum), .HA_cout (st1_c_out));
 
-half_adder half_adder_st2 (.in1 (st2_in1), .in2 (st2_in2), .sum (st2_sum), .c (st2_c_out));
+half_adder half_adder_st2 (.HA_in1 (st2_HA_in1), .HA_in2 (st2_HA_in2), .HA_sum (st2_sum), .HA_cout (st2_c_out));
 
-assign st1_in1 = A;
-assign st1_in2 = B;
+assign st1_HA_in1 = FA_in1;
+assign st1_HA_in2 = FA_in2;
 
-assign st2_in1 = C_in; // to be checked!!!!! checked and it works
-assign st2_in2 = st1_sum;
+assign st2_HA_in1 = FA_cin; // to be checked!!!!! checked and it works
+assign st2_HA_in2 = st1_sum;
 
-assign Sum = st2_sum;
+assign FA_sum = st2_sum;
 
-or (C_out, st1_c_out, st2_c_out);
+or (FA_cout, st1_c_out, st2_c_out);
 
 endmodule
