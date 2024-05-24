@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 // `include "half_adder.v
-`include "./half_adder.v"
+`include "half_adder.v"
 
 // // Verilog allows you to separate HDL source code into more than one file. To reference the code in another file, use the following syntax in the current file.
 // // `include <path/file-to-be-included>
