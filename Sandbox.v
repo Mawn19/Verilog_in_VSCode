@@ -1,5 +1,6 @@
 `timescale 1ns/1ps
 
+
 module half_adder(in1, in2, sum, c_in);
 
     input in1, in2;
