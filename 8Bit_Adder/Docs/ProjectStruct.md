@@ -1,5 +1,5 @@
 
-//ChatGPT recommendation:
+# ChatGPT recommendation
 
 your_project_name/
 ├── src/               # Your source code (Verilog, VHDL, C, Python, etc.)

@@ -1,3 +1,5 @@
+# README
+
 The project "Verilog in VS Code" is a workplace to learn and practice Verilog within MS Code.
 At first stage, this project is saved locally. Later, this should be handled via Github.
 
