@@ -14,8 +14,8 @@
 
 
 `timescale 1ms/1ps
-`include "half_adder.v"
-
+//`include "half_adder.v"
+`include "8Bit_Adder\src\modules\half_adder.v"
 
 
 // module half_adder(HA_in1, HA_in2, HA_sum, HA_cout);

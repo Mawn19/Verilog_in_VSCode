@@ -1,6 +1,6 @@
 `timescale 1ms/1ps
-`include "full_adder.v"
-
+//`include "full_adder.v"
+`include "8Bit_Adder\src\modules\full_adder.v"
 module adder_8bits (
     input  [7:0] Adder_in1, Adder_in2,
     input  [7:0] Adder_cin,

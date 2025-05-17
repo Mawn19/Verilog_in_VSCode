@@ -1,19 +1,20 @@
 `timescale 1ms/1ps
-`include "adder_8bits.v"
+//`include "adder_8bits.v"
+`include "8Bit_Adder\src\modules\adder_8bits.v"
 
 module tb_adder_8bits;
 
-reg [7:0] tb_adder_in1, tb_adder_in2, tb_adder_cin;
-wire [7:0] tb_adder_sum, tb_adder_cout;
+  reg [7:0] tb_adder_in1, tb_adder_in2, tb_adder_cin;
+  wire [7:0] tb_adder_sum, tb_adder_cout;
 
-adder_8bits uut(
+    adder_8bits uut(
 
-    .Adder_in1 (tb_adder_in1),
-    .Adder_in2 (tb_adder_in2),
-    .Adder_cin (tb_adder_cin),
-    .Adder_sum (tb_adder_sum),
-    .Adder_cout (tb_adder_cout)
-    );
+        .Adder_in1 (tb_adder_in1),
+        .Adder_in2 (tb_adder_in2),
+        .Adder_cin (tb_adder_cin),
+        .Adder_sum (tb_adder_sum),
+        .Adder_cout (tb_adder_cout)
+        );
 
 
   initial 
@@ -53,6 +54,4 @@ adder_8bits uut(
     end
 
   initial #12 $finish;
-
-
 endmodule
