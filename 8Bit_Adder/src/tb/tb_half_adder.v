@@ -21,7 +21,7 @@ half_adder uut(
     .HA_in2 (tb_HA_in2)
     );
 
-  initial 
+  initial
     begin
 
         $dumpfile("tb_half_adder.vcd");
@@ -33,7 +33,7 @@ half_adder uut(
         #2 tb_HA_in1 = 1'b0  ; tb_HA_in2 = 1'b1;
         #2 tb_HA_in1 = 1'b1  ; tb_HA_in2 = 1'b0;
         #2 tb_HA_in1 = 1'b1  ; tb_HA_in2 = 1'b1;
-        
+
       $display("Test complete");
     end
 
