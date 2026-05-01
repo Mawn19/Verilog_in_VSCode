@@ -1,3 +1,5 @@
+# Full Adder build
+
 Steps to create an 8 bits full adder:
 
 To create a full adder, you need to create a half adder at first, then combine two of them
