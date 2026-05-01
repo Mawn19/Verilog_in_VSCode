@@ -1,5 +1,6 @@
 `timescale 1ms/1ps
-`include "full_adder.v"
+
+`include "../modules/full_adder.v"
 
 module tb_full_adder;
 

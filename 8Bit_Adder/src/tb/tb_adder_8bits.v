@@ -1,6 +1,6 @@
 `timescale 1ms/1ps
-//`include "adder_8bits.v"
-`include "8Bit_Adder\src\modules\adder_8bits.v"
+
+`include "../modules/adder_8bits.v"
 
 module tb_adder_8bits;
 
