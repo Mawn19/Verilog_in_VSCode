@@ -8,14 +8,12 @@ module tb_adder_8bits;
   wire [7:0] tb_adder_sum, tb_adder_cout;
 
     adder_8bits uut(
-
         .Adder_in1 (tb_adder_in1),
         .Adder_in2 (tb_adder_in2),
         .Adder_cin (tb_adder_cin),
         .Adder_sum (tb_adder_sum),
         .Adder_cout (tb_adder_cout)
         );
-
 
   initial 
     begin
@@ -49,9 +47,9 @@ module tb_adder_8bits;
         // #1 tb_adder_in1 = 8'b0000_0000 ; tb_adder_in2 = 8'b0000_0000; tb_adder_cin = 8'b0000_0000; 
         // #1 tb_adder_in1 = 8'b0000_0000 ; tb_adder_in2 = 8'b0000_0000; tb_adder_cin = 8'b0000_0000; 
 
-
       $display("Test complete");
     end
 
   initial #12 $finish;
+  
 endmodule
